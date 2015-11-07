@@ -2,7 +2,7 @@ from setuptools import setup
 from mynumber import __version__
 import os
 
-f = open(os.path.join(os.path.dirname(__file__), 'README.rst'))
+f = open(os.path.join(os.path.dirname(__file__), 'README.rst'), 'rt')
 long_description = f.read()
 f.close()
 
