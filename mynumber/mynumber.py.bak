@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+from __future__ import absolute_import, unicode_literals
 from collections import defaultdict
 import random
 
@@ -28,7 +28,7 @@ class MyNumber(object):
         """
         _max = 10000000
         if count > _max:
-            raise ValueError("count is large value")
+            raise ValueError, "count is large value"
 
         # generate My Number by Duplicate No
         result = defaultdict(int)
@@ -68,7 +68,7 @@ class MyNumber(object):
                 return n + 1
             if 7 <= _n <= 11:
                 return _n - 5
-            raise ValueError("N is invalid data").with_traceback(_n)
+            raise ValueError, "N is invalid data", _n
 
         n = 12 - len(str(inspection))
         _result = 0
@@ -107,4 +107,4 @@ class MyNumber(object):
             raise TypeError
 
         if len(str(number)) != 12:
-            raise ValueError("number must be 12-digit:{}".format(str(number)))
+            raise ValueError, "number must be 12-digit:{}".format(str(number))

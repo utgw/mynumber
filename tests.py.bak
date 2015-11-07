@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+from __future__ import absolute_import, unicode_literals
 from mynumber import MyNumber
 
 
@@ -66,5 +66,5 @@ def test_gets():
     assert len(numbers) == count
 
     for num in numbers:
-        print(num)
+        print num
         assert MyNumber.validate(num), num
