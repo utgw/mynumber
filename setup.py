@@ -1,10 +1,12 @@
 from setuptools import setup
 from mynumber import __version__
 import os
+import codecs
 
-f = open(os.path.join(os.path.dirname(__file__), 'README.rst'), 'rt')
+f = codecs.open(os.path.join(os.path.dirname(__file__), 'README.rst'), encoding='utf-8')
 long_description = f.read()
 f.close()
+
 
 setup(
     name='mynumber',
